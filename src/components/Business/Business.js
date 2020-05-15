@@ -1,25 +1,25 @@
 import React from 'react';
 import './Business.css';
 
-function Business() {
+function Business(props) {
     return (
         <div className="Business">
             <div className="image-container">
-                <img src="https://s3.amazonaws.com/codecademy-content/programs/react/ravenous/pizza.jpg" alt="" />
+                <img src={props.business.imageSrc} alt="" />
             </div>
-            <h2>{this.props.name}</h2>
+            <h2>{props.business.name}</h2>
             <div className="Business-information">
                 <div className="Business-address">
-                    <p>{this.props.address}</p>
-                    <p>{this.props.city}</p>
+                    <p>{props.business.address}</p>
+                    <p>{props.business.city}</p>
                     <p>
-                        {this.props.state} {this.props.zipCode}
+                        {props.business.state} {props.business.zipCode}
                     </p>
                 </div>
                 <div className="Business-reviews">
-                    <h3>{this.props.category}</h3>
-                    <h3 className="rating">{this.props.rating} stars}</h3>
-                    <p>{this.props.reviewCount} reviews</p>
+                    <h3>{props.business.category}</h3>
+                    <h3 className="rating">{props.business.rating} stars}</h3>
+                    <p>{props.business.reviewCount} reviews</p>
                 </div>
             </div>
         </div>
