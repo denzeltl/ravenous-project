@@ -5,12 +5,9 @@ import Business from '../Business/Business';
 function BusinessList() {
     return (
         <div class="BusinessList">
-            <Business />
-            <Business />
-            <Business />
-            <Business />
-            <Business />
-            <Business />
+            {this.props.businesses.map((business) => (
+                <Business business={business} />
+            ))}
         </div>
     );
 }
