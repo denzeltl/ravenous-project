@@ -5,7 +5,7 @@ function SearchBar(props) {
     const [state, setState] = useState({
         term: '',
         location: '',
-        sortBy: 'best_match',
+        sortBy: 'Best Match',
     });
 
     const sortByOptions = {
@@ -24,6 +24,8 @@ function SearchBar(props) {
 
     const handleSortByChange = (sortByOption) => {
         setState({
+            term: state.term,
+            location: state.location,
             sortBy: sortByOption,
         });
     };
@@ -31,18 +33,22 @@ function SearchBar(props) {
     const handleTermChange = (event) => {
         setState({
             term: event.target.value,
+            location: state.location,
+            sortBy: state.sortBy,
         });
     };
 
     const handleLocationChange = (event) => {
         setState({
+            term: state.term,
             location: event.target.value,
+            sortBy: state.sortBy,
         });
     };
 
     const handleSearch = (event) => {
-        props.searchYelp(state.term, state.location, state.sortBy);
         event.preventDefault();
+        props.searchYelp(state.term, state.location, state.sortBy);
     };
 
     const renderSortByOptions = () => {
