@@ -12,10 +12,9 @@ function App() {
     const searchYelp = (term, location, sortBy) => {
         yelp.search(term, location, sortBy).then((businesses) => {
             setState({
-                businesses: state.businesses,
+                businesses: businesses,
             });
         });
-        console.log(`Searching Yelp with ${term}, ${location}, ${sortBy}`);
     };
 
     return (
