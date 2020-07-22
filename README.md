@@ -1,11 +1,9 @@
 # Ravenous Project
 
-PROJECT DESCRIPTION
+A Yelp clone app from _Codecademy's_ [React Skill Path](https://www.codecademy.com/learn/paths/build-web-apps-with-react).
 
-View project [here](PROJECT URL)
+**Built with:** _React_
 
-**Built with:** _LANGUAGES_
-
-**Completed on:** _mm/dd/yyyy_
+**Completed on:** _06/05/2020_
 
 ---
